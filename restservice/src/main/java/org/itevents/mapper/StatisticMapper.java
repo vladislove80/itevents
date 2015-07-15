@@ -5,14 +5,8 @@ import org.itevents.model.StatisticEvent;
 
 public interface StatisticMapper {
 
-    @Results({
-            @Result(property = "id", column = "id"),
-            @Result(property = "eventId", column = "event_id"),
-            @Result(property = "date", column = "date"),
-            @Result(property = "userId", column = "user_id")
-    })
-    @Select("SELECT id, event_id, date, user_id FROM statistic WHERE event_id = #{event_id}")
-    StatisticEvent selectStatistic(@Param("event_id") int eventId);
+    @Select("SELECT COUNT(*) FROM statistic WHERE event_id = #{event_id};")
+    int selectStatistic(@Param("event_id") int eventId);
 
     @Insert("INSERT INTO statistic(event_id, date, user_id) VALUES(#{event_id}, NOW(),  #{user_id})")
     void addClick(@Param("event_id") int eventId, @Param("user_id") int userId);
