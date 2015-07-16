@@ -1,7 +1,6 @@
 package org.itevents.mapper;
 
 import org.apache.ibatis.annotations.*;
-import org.itevents.model.StatisticEvent;
 
 public interface StatisticMapper {
 

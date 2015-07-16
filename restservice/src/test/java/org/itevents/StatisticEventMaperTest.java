@@ -1,7 +1,6 @@
 package org.itevents;
 
 import org.itevents.mapper.StatisticMapper;
-import org.itevents.model.StatisticEvent;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +19,9 @@ public class StatisticEventMaperTest {
 
     @Test
     public void testStaticMapper() {
-        //statisticMapper.addClick(1,1);
-        //System.out.println(statisticMapper.selectStatistic(1) );
-        //statisticMapper.deleteClick(1);
+       //statisticMapper.addClick(1,1);
+       //System.out.println(statisticMapper.selectStatistic(1));
+       //statisticMapper.deleteClick(1);
     }
 
 }
