@@ -10,7 +10,7 @@
             CREATE TABLE statistic (
               id SERIAL UNIQUE PRIMARY KEY NOT NULL,
               event_id INT NOT NULL,
-              count INT DEFAULT 0,
+              date DATE,
               user_id INT NOT NULL,
               FOREIGN KEY (event_id) REFERENCES events (id),
               FOREIGN KEY (user_id) REFERENCES users (id)
