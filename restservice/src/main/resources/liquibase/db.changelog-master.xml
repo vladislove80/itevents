@@ -9,5 +9,6 @@
     <include file="src/main/resources/liquibase/changeset-000-enable_postgis.xml"/>
     <include file="src/main/resources/liquibase/changeset-001-add_table_event.xml"/>
     <include file="src/main/resources/liquibase/changeset-002-insert_data_to_event.xml"/>
+    <include file="src/main/resources/liquibase/changeset-006-create-event-counter.xml"/>
 
 </databaseChangeLog>
