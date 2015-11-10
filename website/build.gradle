@@ -1,9 +1,14 @@
-group 'org.itevents'
-version '1.0-SNAPSHOT'
+subprojects {
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+    apply plugin: 'java'
 
-dependencies {
-    compile 'junit:junit:4.12'
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
 }
+
+defaultTasks 'clean', 'assemble', 'liquibaseUpdate', 'test'
